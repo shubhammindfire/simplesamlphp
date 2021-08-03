@@ -1,0 +1,90 @@
+{
+    "name": "simplesamlphp/simplesamlphp",
+    "description": "A PHP implementation of a SAML 2.0 service provider and identity provider.",
+    "type": "project",
+    "keywords": [ "saml2", "shibboleth","oauth","ws-federation","sp","idp" ],
+    "homepage": "http://simplesamlphp.org",
+    "license": "LGPL-2.1-or-later",
+    "authors": [
+        {
+            "name": "Andreas Åkre Solberg",
+            "email": "andreas.solberg@uninett.no"
+        },
+        {
+            "name": "Olav Morken",
+            "email": "olav.morken@uninett.no"
+        },
+        {
+            "name": "Jaime Perez",
+            "email": "jaime.perez@uninett.no"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "SimpleSAML\\": "lib/SimpleSAML"
+        },
+        "files": ["lib/_autoload_modules.php"]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SimpleSAML\\Test\\": ["tests", "tests/lib/SimpleSAML"],
+            "SimpleSAML\\Test\\Module\\admin\\": ["tests/lib/SimpleSAML/modules/admin/lib"],
+            "SimpleSAML\\Test\\Module\\core\\": ["tests/lib/SimpleSAML/modules/core/lib"],
+            "SimpleSAML\\Test\\Module\\cron\\": ["tests/lib/SimpleSAML/modules/cron/lib"],
+            "SimpleSAML\\Test\\Module\\exampleauth\\": ["tests/lib/SimpleSAML/modules/exampleauth/lib"],
+            "SimpleSAML\\Test\\Module\\multiauth\\": ["tests/lib/SimpleSAML/modules/multiauth/lib"],
+            "SimpleSAML\\Test\\Module\\saml\\": ["tests/lib/SimpleSAML/modules/saml/lib"]
+        },
+        "files": ["tests/_autoload_modules.php"]
+    },
+    "require": {
+        "php": ">=7.4 || ^8.0 ",
+        "ext-SPL": "*",
+        "ext-zlib": "*",
+        "ext-pcre": "*",
+        "ext-openssl": "*",
+        "ext-dom": "*",
+        "ext-date": "*",
+        "ext-hash": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "gettext/gettext": "^4.6",
+        "phpmailer/phpmailer": "^6.1",
+        "simplesamlphp/assert": "^0.2.6",
+        "simplesamlphp/saml2": "^4.1",
+        "simplesamlphp/twig-configurable-i18n": "^2.3",
+        "symfony/cache": "^4.0 || ^5.0",
+        "symfony/config": "^4.0 || ^5.0",
+        "symfony/console": "^4.0 || ^5.0",
+        "symfony/dependency-injection": "^4.0 || ^5.0",
+        "symfony/finder": "^4.0 || ^5.0",
+        "symfony/framework-bundle": "^4.0 || ^5.0",
+        "symfony/http-foundation": "^4.0 || ^5.0",
+        "symfony/http-kernel": "^4.0 || ^5.0",
+        "symfony/routing": "^4.0 || ^5.0",
+        "symfony/var-exporter": "^5.0",
+        "symfony/yaml": "^4.0 || ^5.0",
+        "twig/twig": "~2.0"
+    },
+    "require-dev": {
+        "ext-curl": "*",
+        "mikey179/vfsstream": "~1.6",
+        "simplesamlphp/simplesamlphp-module-adfs": "dev-master",
+        "simplesamlphp/simplesamlphp-test-framework": "^1.1.0",
+        "simplesamlphp/xml-security": "^0.2.7"
+    },
+    "suggest": {
+        "predis/predis": "Needed if a Redis server is used to store session information",
+        "ext-curl": "Needed in order to check for updates automatically",
+        "ext-ldap": "Needed if an LDAP backend is used",
+        "ext-radius": "Needed if a Radius backend is used",
+        "ext-memcache": "Needed if a Memcache server is used to store session information",
+        "ext-pdo": "Needed if a database backend is used, either for authentication or to store session information",
+        "ext-mysql": "Needed if a MySQL backend is used, either for authentication or to store session information",
+        "ext-pgsql": "Needed if a PostgreSQL backend is used, either for authentication or to store session information"
+    },
+    "support": {
+        "issues": "https://github.com/simplesamlphp/simplesamlphp/issues",
+        "source": "https://github.com/simplesamlphp/simplesamlphp"
+    }
+}
